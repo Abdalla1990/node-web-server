@@ -38,7 +38,7 @@
 
      var now = new Date().toString();
      var log = `${now} ${req.method} ${req.url}`;
-     fs.appendFileSync('log.txt', log + '\n', (err) => {
+     fs.appendFile('log.txt', log + '\n', (err) => {
          if (err) {
              console.log(err);
          }
