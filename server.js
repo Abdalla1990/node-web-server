@@ -1,6 +1,11 @@
  const express = require('express');
  const hbs = require('hbs');
  const fs = require('fs');
+ const port = process.env.PORT || 3000;
+
+
+
+
  var app = express();
 
  // this defins the directory of our parials , which allows us to render whenever we want in our hbs pages by 
@@ -87,6 +92,6 @@
 
      })
      // listen to port 3000 and print the message below :
- app.listen('3000', () => {
-     console.log('server is up on port 3000')
+ app.listen(port, () => {
+     console.log(`server is running using port number ${port}`)
  });
