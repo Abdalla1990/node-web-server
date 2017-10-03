@@ -80,6 +80,16 @@
 
  });
 
+
+
+
+ app.get('/projects', (req, res) => {
+     res.render('projects.hbs', {
+         pageTitle: 'projects',
+
+     });
+ })
+
  // statically send the json object error with some details 
  app.get('/bad', (req, res) => {
 
